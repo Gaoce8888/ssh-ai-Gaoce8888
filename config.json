@@ -1,0 +1,78 @@
+{
+    "server": {
+        "port": 8005,
+        "address": "0.0.0.0",
+        "log_level": "info",
+        "max_connections": 1000,
+        "keep_alive": 120,
+        "compression": true,
+        "tls": {
+            "enabled": false,
+            "cert_path": "certs/server.crt",
+            "key_path": "certs/server.key"
+        }
+    },
+    "auth": {
+        "enabled": true,
+        "username": "gaoce",
+        "password": "123456",
+        "session_timeout": 3600,
+        "max_attempts": 5,
+        "lockout_duration": 300
+    },
+    "database": {
+        "path": "data/db",
+        "max_size": 2147483648,
+        "sync_interval": 30,
+        "compression": true,
+        "cache_size": 536870912
+    },
+    "cache": {
+        "capacity": 20000,
+        "ttl": 7200,
+        "cleanup_interval": 3600,
+        "shards": 16
+    },
+    "ai": {
+        "providers": ["openai"],
+        "timeout": 30,
+        "retry_count": 3,
+        "batch_size": 10,
+        "parallel_requests": 5
+    },
+    "ssh": {
+        "max_sessions": 500,
+        "timeout": 600,
+        "keep_alive": 60,
+        "compression": true,
+        "cipher": "aes256-gcm@openssh.com",
+        "key_exchange": "curve25519-sha256"
+    },
+    "performance": {
+        "request_timeout": 30,
+        "max_concurrent_requests": 100,
+        "rate_limit": {
+            "enabled": true,
+            "window": 60,
+            "max_requests": 1000
+        },
+        "memory": {
+            "max_heap": 2147483648,
+            "gc_interval": 3600
+        }
+    },
+    "mobile": {
+        "enabled": true,
+        "breakpoints": {
+            "mobile": 768,
+            "tablet": 1024,
+            "desktop": 1280
+        },
+        "optimizations": {
+            "fonts": true,
+            "images": true,
+            "scripts": true,
+            "styles": true
+        }
+    }
+}
