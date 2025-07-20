@@ -59,11 +59,33 @@ num_cpus = "1.16"
 once_cell = "1.19"
 lazy_static = "1.4"
 
+# 性能监控和指标
+metrics = "0.21"
+metrics-exporter-prometheus = "0.12"
+procfs = "0.15"
+
+# 对象池和内存优化
+object-pool = "0.1"
+
+# 压缩和编码
+flate2 = "1.0"
+brotli = "3.4"
+
+# JWT 和加密
+jsonwebtoken = "9.2"
+sha2 = "0.10"
+
 [profile.release]
 # 性能优化
 opt-level = 3
 lto = true
 codegen-units = 1
+panic = "abort"
+strip = true
+debug = false
+
+[profile.release.package."*"]
+opt-level = 3
 
 [features]
 default = []
