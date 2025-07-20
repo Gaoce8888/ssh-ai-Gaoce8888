@@ -1,0 +1,171 @@
+/* 终端样式 */
+
+/* 覆盖 xterm 默认样式 */
+.xterm {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 1.5;
+    cursor: text;
+}
+
+.xterm.focus,
+.xterm:focus {
+    outline: none;
+}
+
+.xterm .xterm-helpers {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+.xterm .xterm-helper-textarea {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    left: -9999em;
+    top: 0;
+    width: 0;
+    height: 0;
+    z-index: -5;
+    white-space: nowrap;
+    overflow: hidden;
+    resize: none;
+}
+
+/* 自定义终端主题 */
+.terminal-container .xterm {
+    padding: var(--spacing-md);
+    height: 100%;
+}
+
+.terminal-container .xterm-screen {
+    height: 100%;
+}
+
+.terminal-container .xterm-viewport {
+    background: var(--bg-dark);
+    overflow-y: auto;
+}
+
+/* 滚动条样式 */
+.terminal-container .xterm-viewport::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+
+.terminal-container .xterm-viewport::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.terminal-container .xterm-viewport::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.terminal-container .xterm-viewport::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* 光标样式 */
+.terminal-container .xterm-cursor-layer {
+    z-index: 4;
+}
+
+.terminal-container .xterm-screen .xterm-cursor {
+    background: var(--color-primary);
+    opacity: 0.7;
+}
+
+.terminal-container .xterm-screen .xterm-cursor.xterm-cursor-blink {
+    animation: xterm-cursor-blink 1s infinite;
+}
+
+@keyframes xterm-cursor-blink {
+    0%, 50% { opacity: 0.7; }
+    50.01%, 100% { opacity: 0; }
+}
+
+/* 选择样式 */
+.terminal-container .xterm-selection {
+    background: rgba(74, 158, 255, 0.3);
+}
+
+/* 链接样式 */
+.terminal-container .xterm-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.terminal-container .xterm-link:hover {
+    opacity: 0.8;
+}
+
+/* 终端颜色主题 */
+.terminal-container {
+    /* ANSI 颜色 */
+    --ansi-black: #000000;
+    --ansi-red: #cd3131;
+    --ansi-green: #0dbc79;
+    --ansi-yellow: #e5e510;
+    --ansi-blue: #2472c8;
+    --ansi-magenta: #bc3fbc;
+    --ansi-cyan: #11a8cd;
+    --ansi-white: #e5e5e5;
+    
+    /* 亮色 ANSI */
+    --ansi-bright-black: #666666;
+    --ansi-bright-red: #f14c4c;
+    --ansi-bright-green: #23d18b;
+    --ansi-bright-yellow: #f5f543;
+    --ansi-bright-blue: #3b8eea;
+    --ansi-bright-magenta: #d670d6;
+    --ansi-bright-cyan: #29b8db;
+    --ansi-bright-white: #ffffff;
+}
+
+/* 移动端终端优化 */
+@media (max-width: 768px) {
+    .terminal-container .xterm {
+        font-size: 12px;
+        padding: var(--spacing-sm);
+    }
+    
+    .terminal-container .xterm-viewport::-webkit-scrollbar {
+        width: 6px;
+    }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+    .terminal-container .xterm {
+        touch-action: pan-y;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .terminal-container .xterm-screen {
+        touch-action: pan-y;
+    }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+    .terminal-container .xterm-screen .xterm-cursor {
+        background: white;
+        opacity: 1;
+    }
+    
+    .terminal-container .xterm-selection {
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+    .terminal-container .xterm-screen .xterm-cursor.xterm-cursor-blink {
+        animation: none;
+        opacity: 0.7;
+    }
+} 
