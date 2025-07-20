@@ -1,0 +1,124 @@
+/* CSS Reset - 现代化的CSS重置 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 防止字体大小调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* 设置核心默认值 */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 移除列表样式 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 默认链接样式 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 让图片更容易使用 */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 继承字体 */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+}
+
+/* 移除按钮的默认样式 */
+button {
+    cursor: pointer;
+    text-align: inherit;
+}
+
+/* 避免文本溢出 */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 为根元素创建堆叠上下文 */
+#root,
+#__next,
+#app {
+    isolation: isolate;
+}
+
+/* 禁用默认的触摸高亮 */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 优化滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.5);
+}
+
+/* 隐藏数字输入的旋转按钮 */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* 确保隐藏元素不占用空间 */
+[hidden] {
+    display: none !important;
+} 
