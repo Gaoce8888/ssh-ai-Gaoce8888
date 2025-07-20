@@ -11,6 +11,10 @@ mod ssh;
 mod websocket;
 mod ai;
 mod config;
+// 新增优化模块
+mod performance;
+mod cache;
+mod connection_pool;
 
 use models::*;
 use websocket::handle_websocket;
