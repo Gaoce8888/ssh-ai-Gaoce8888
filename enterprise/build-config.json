@@ -1,0 +1,85 @@
+{
+    "build": {
+        "profile": "release",
+        "optimizations": {
+            "rust": {
+                "target_cpu": "native",
+                "opt_level": 3,
+                "debug_assertions": false,
+                "overflow_checks": false
+            },
+            "javascript": {
+                "minify": true,
+                "tree_shaking": true,
+                "source_maps": false
+            },
+            "css": {
+                "minify": true,
+                "autoprefixer": true,
+                "source_maps": false
+            }
+        },
+        "output": {
+            "directory": "dist",
+            "static": "static",
+            "assets": {
+                "js": "js",
+                "css": "css",
+                "fonts": "fonts",
+                "images": "images"
+            }
+        },
+        "versioning": {
+            "enabled": true,
+            "strategy": "hash",
+            "prefix": "v"
+        },
+        "caching": {
+            "enabled": true,
+            "strategy": "long_term",
+            "max_age": "31536000"
+        },
+        "security": {
+            "csp": {
+                "enabled": true,
+                "policies": {
+                    "script_src": ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+                    "style_src": ["'self'", "'unsafe-inline'"],
+                    "img_src": ["'self'", "data:", "https:"]
+                }
+            },
+            "subresource_integrity": true,
+            "strict_transport_security": true
+        },
+        "monitoring": {
+            "enabled": true,
+            "providers": ["newrelic", "datadog"],
+            "metrics": {
+                "performance": true,
+                "errors": true,
+                "user_actions": true
+            }
+        },
+        "deployment": {
+            "strategy": "blue_green",
+            "rollback": true,
+            "health_checks": {
+                "timeout": 30,
+                "interval": 5,
+                "threshold": 3
+            }
+        },
+        "testing": {
+            "unit": true,
+            "integration": true,
+            "e2e": true,
+            "performance": true,
+            "security": true
+        },
+        "documentation": {
+            "enabled": true,
+            "format": "md",
+            "output": "docs"
+        }
+    }
+}
