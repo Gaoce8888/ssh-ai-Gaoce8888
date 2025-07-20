@@ -1,0 +1,29 @@
+{
+  "ssh_configs": [
+    {
+      "name": "example_server",
+      "host": "example.com",
+      "port": 22,
+      "username": "username",
+      "password": "PASSWORD_REMOVED"
+    }
+  ],
+  "ai_configs": {
+    "apiKey": "API_KEY_REMOVED",
+    "model": "gpt-3.5-turbo",
+    "endpoint": "https://api.openai.com/v1/chat/completions",
+    "systemPrompt": "\u4f60\u662f\u4e00\u4e2a\u4e13\u4e1a\u7684\u7cfb\u7edf\u7ba1\u7406\u5458\u52a9\u624b\uff0c\u5e2e\u52a9\u7528\u6237\u5b89\u5168\u5730\u6267\u884c\u670d\u52a1\u5668\u547d\u4ee4\u3002"
+  },
+  "ai_config": {
+    "provider": "claude",
+    "apiKey": "API_KEY_REMOVED",
+    "endpoint": "/claude-proxy",
+    "model": "claude-3-opus-20240229",
+    "maxTokens": 1000
+  },
+  "ai": {
+    "provider": "anthropic",
+    "apiKey": "API_KEY_REMOVED",
+    "model": "claude-3-opus-20240229"
+  }
+}

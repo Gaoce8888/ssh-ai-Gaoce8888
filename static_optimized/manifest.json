@@ -1,0 +1,26 @@
+{
+  "generated": "2025-07-20T07:43:55Z",
+  "assets": {
+    "index.html": {"size": 7217, "hash": "9068bdfbee5a9d26d6a1343155166d0f"},
+    "sw.js": {"size": 1610, "hash": "b8dd8e02303641bbaf8f216e9099d487"},
+    "css/chat.css": {"size": 3451, "hash": "6d047ed96787269bfa69da5f2ecd12af"},
+    "css/components.css": {"size": 5362, "hash": "26fb2f5fd318aad7d938d1b60ba978a0"},
+    "css/styles.css": {"size": 2995, "hash": "39664e502f65b63415d96df1a644b48c"},
+    "css/responsive.css": {"size": 3411, "hash": "ed68a995d3c16388d969b6871ccf6882"},
+    "css/layout.css": {"size": 3831, "hash": "2500cfb206ba0364f0c5cb5f26764b7f"},
+    "css/variables.css": {"size": 1920, "hash": "d19d1aeb9bc75af993492f2315954611"},
+    "css/reset.css": {"size": 1122, "hash": "bee0a06d5657a717372ae8c58f8b1be9"},
+    "css/terminal.css": {"size": 2484, "hash": "a243ed59d13e9e9ad905d7a758d81070"},
+    "js/main.js": {"size": 3435, "hash": "d2d426f0af26d37acf71bd9812a11ec4"},
+    "js/terminal-output.js": {"size": 1537, "hash": "e22703de568332cfda6d159546587025"},
+    "js/app.js": {"size": 5895, "hash": "8f48416de92bf59220fd5a744d0a5fc8"},
+    "js/websocket.js": {"size": 2002, "hash": "91ee4bb18c470d647a05497c67ce603a"},
+    "js/ai-helper.js": {"size": 1281, "hash": "4fcec9eb7198c7bd926a8fe5544e9077"},
+    "js/modules/terminal.js": {"size": 2724, "hash": "04c0f7361e2287fbbd10e33c1c8870c6"},
+    "js/modules/config.js": {"size": 3742, "hash": "e0bd44f85dbb804e65a2c534895f1bd3"},
+    "js/modules/ui.js": {"size": 7302, "hash": "050effd8ea8fc1b20440342ff33dcd59"},
+    "js/modules/ssh.js": {"size": 8289, "hash": "8ce5ebd79b25941f18769316884f8450"},
+    "js/modules/utils.js": {"size": 4832, "hash": "9bc7bbe0009fde5e65594b3ee0ebac3c"},
+    "js/modules/ai-chat.js": {"size": 6385, "hash": "a6b87b9b6333c61ad89eb8189c7aa89b"}
+  }
+}
